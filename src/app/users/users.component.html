@@ -1,0 +1,23 @@
+<div class="user-list">
+    <div class="content">
+        <div class="card" *ngFor="let user of Users; let i = index">
+        <div class="card-content">
+          <p class="title">
+            {{user?.displayName}}
+          </p>
+          <p class="subtitle">
+            <span class="prop">Id:</span> {{user?.id}}
+          </p>
+          <p>
+            <span class="prop">E-mail:</span> {{user?.email}}
+          </p>
+          <p>
+            <span class="prop">Create-Date:</span> {{user?.createDate?.toDateString()}}
+          </p>
+          <p>
+            <span class="prop">Account-Type:</span> {{user?.accountType}}
+          </p>
+        </div>
+      </div>
+    </div>
+</div>

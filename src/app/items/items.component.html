@@ -1,0 +1,29 @@
+<div class="item-list">
+  <div class="search">
+    <div class="field">
+      <div class="control">
+        <input class="input" type="text" [(ngModel)]="filterInput" placeholder="Search By Name">
+      </div>
+    </div>
+  </div>
+  <div class="content">
+    <div class="card" *ngFor="let item of Items | namefilter: filterInput">
+      <div class="card-content" [routerLink]="['/users', 'item' , item?.id]">
+        <p class="title">
+          {{item?.title}}
+        </p>
+        <p class="subtitle">
+          <span class="prop">{{item?.postedOn?.toDateString()}}</span>
+        </p>
+        <p>
+          <span class="prop">Owner:</span> {{item?.owner.displayName}}
+        </p>
+      </div>
+
+    </div>
+    <div class="empty" *ngIf="(Items | namefilter: filterInput).length === 0">
+      <h2>There are no items found</h2>
+      <i class="large material-icons">sentiment_very_dissatisfied</i>
+    </div>
+  </div>
+</div>

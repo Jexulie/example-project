@@ -1,0 +1,24 @@
+<div class="item-details">
+  <div class="content">
+    <div class="card">
+      <header class="card-header">
+        <p class="card-header-title">
+          {{Item?.title}}
+        </p>
+        <a href="#" class="card-header-icon" aria-label="more options">
+          <span class="icon">
+            <i class="fas fa-angle-down" aria-hidden="true"></i>
+          </span>
+        </a>
+      </header>
+      <div class="card-content">
+        <div class="content">
+          <p><span class="props">Owner: </span>{{ Item?.owner.displayName }}</p>
+          <p>{{ Item?.description }}</p>
+          <br>
+          <p>Posted-On: {{ Item?.postedOn.toDateString() }}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

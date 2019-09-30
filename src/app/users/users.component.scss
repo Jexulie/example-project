@@ -1,0 +1,18 @@
+.user-list{
+    margin-top: 75px;
+}
+.prop{
+    color: #3273dc;
+    font-weight: 500;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    .card{
+        min-width: 80%;
+        margin: 15px;
+    }
+}
